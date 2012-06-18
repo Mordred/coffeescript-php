@@ -28,7 +28,7 @@ class yy_Comment extends yy_Base
     return TRUE;
   }
 
-  function make_return()
+  function make_return($res = NULL)
   {
     return $this;
   }
