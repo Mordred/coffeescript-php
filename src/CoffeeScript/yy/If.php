@@ -6,7 +6,7 @@ class yy_If extends yy_Base
 {
   public $children = array('condition', 'body', 'else_body');
 
-  function constructor($condition, $body, $options = array())
+  function constructor($condition = NULL, $body = NULL, $options = array())
   {
     $this->condition = (isset($options['type']) && $options['type'] === 'unless') ? $condition->invert() : $condition;
     $this->body = $body;
@@ -152,7 +152,7 @@ class yy_If extends yy_Base
     return $this;
   }
 
-  function unfold_soak()
+  function unfold_soak($options)
   {
     return $this->soak ? $this : FALSE;
   }

@@ -31,7 +31,7 @@ class yy_Value extends yy_Base
     return $this;
   }
 
-  function assigns($name)
+  function assigns($name = NULL)
   {
     return ! count($this->properties) && $this->base->assigns($name);
   }
@@ -149,7 +149,7 @@ class yy_Value extends yy_Base
     return ($this->base instanceof yy_Literal) && preg_match(IS_STRING, ''.$this->base->value);
   }
 
-  function is_statement($options)
+  function is_statement($options = array())
   {
     return ! count($this->properties) && $this->base->is_statement($options);
   }

@@ -15,7 +15,7 @@ class yy_Range extends yy_Base
     return ! in_array($num, array(0, NULL, FALSE, ''), TRUE);
   }
 
-  function constructor($from, $to, $tag)
+  function constructor($from = NULL, $to = NULL, $tag = NULL)
   {
     $this->from = $from;
     $this->to = $to;

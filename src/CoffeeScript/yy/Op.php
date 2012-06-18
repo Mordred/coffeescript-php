@@ -21,7 +21,7 @@ class yy_Op extends yy_Base
 
   public $invert = TRUE;
 
-  function constructor($op, $first, $second = NULL, $flip = NULL)
+  function constructor($op = NULL, $first = NULL, $second = NULL, $flip = NULL)
   {
     if ($op === 'in')
     {

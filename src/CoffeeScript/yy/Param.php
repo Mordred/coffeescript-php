@@ -6,7 +6,7 @@ class yy_Param extends yy_Base
 {
   public $children = array('name', 'value');
 
-  function constructor($name, $value = NULL, $splat = NULL)
+  function constructor($name = NULL, $value = NULL, $splat = NULL)
   {
     $this->name = $name;
     $this->value = $value;

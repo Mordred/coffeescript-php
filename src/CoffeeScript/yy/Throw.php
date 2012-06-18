@@ -6,7 +6,7 @@ class yy_Throw extends yy_Base
 {
   public $children = array('expression');
 
-  function constructor($expression)
+  function constructor($expression = NULL)
   {
     $this->expression = $expression;
 
@@ -28,7 +28,7 @@ class yy_Throw extends yy_Base
     return FALSE;
   }
 
-  function make_return()
+  function make_return($res = NULL)
   {
     return $this;
   }

@@ -6,7 +6,7 @@ class yy_Existence extends yy_Base
 {
   public $children = array('expression');
 
-  function constructor($expression)
+  function constructor($expression = NULL)
   {
     $this->expression = $expression;
 

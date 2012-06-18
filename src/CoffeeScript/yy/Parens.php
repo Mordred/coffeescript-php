@@ -6,7 +6,7 @@ class yy_Parens extends yy_Base
 {
   public $children = array('body');
 
-  function constructor($body)
+  function constructor($body = NULL)
   {
     $this->body = $body;
 

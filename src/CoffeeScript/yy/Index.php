@@ -6,14 +6,14 @@ class yy_Index extends yy_Base
 {
   public $children = array('index');
 
-  function constructor($index)
+  function constructor($index = NULL)
   {
     $this->index = $index;
 
     return $this;
   }
 
-  function compile($options)
+  function compile($options, $level = NULL)
   {
     return '['.$this->index->compile($options, LEVEL_PAREN).']';
   }

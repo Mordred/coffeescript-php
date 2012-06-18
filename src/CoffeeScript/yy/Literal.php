@@ -6,14 +6,14 @@ class yy_Literal extends yy_Base
 {
   public $is_undefined = FALSE;
 
-  function constructor($value)
+  function constructor($value = NULL)
   {
     $this->value = $value;
 
     return $this;
   }
 
-  function assigns($name)
+  function assigns($name = NULL)
   {
     return $name === $this->value;
   }
@@ -82,7 +82,7 @@ class yy_Literal extends yy_Base
     return FALSE;
   }
 
-  function make_return()
+  function make_return($res = NULL)
   {
     return $this->is_statement() ? $this : parent::make_return();
   }

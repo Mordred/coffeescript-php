@@ -6,14 +6,14 @@ class yy_Arr extends yy_Base
 {
   public $children = array('objects');
 
-  function constructor($objs)
+  function constructor($objs = NULL)
   {
     $this->objects = $objs ? $objs : array();
 
     return $this;
   }
 
-  function assigns($name)
+  function assigns($name = NULL)
   {
     foreach ($this->objects as $obj)
     {

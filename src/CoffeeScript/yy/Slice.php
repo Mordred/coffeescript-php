@@ -6,7 +6,7 @@ class yy_Slice extends yy_Base
 {
   public $children = array('range');
 
-  function constructor($range)
+  function constructor($range = NULL)
   {
     parent::constructor();
 

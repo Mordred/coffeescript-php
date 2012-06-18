@@ -6,7 +6,7 @@ class yy_Obj extends yy_Base
 {
   public $children = array('properties');
 
-  function constructor($props, $generated = FALSE)
+  function constructor($props = NULL, $generated = FALSE)
   {
     $this->generated = $generated;
 
@@ -16,7 +16,7 @@ class yy_Obj extends yy_Base
     return $this;
   }
 
-  function assigns($name)
+  function assigns($name = NULL)
   {
     foreach ($this->properties as $prop)
     {

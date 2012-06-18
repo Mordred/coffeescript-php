@@ -47,7 +47,7 @@ class yy_Return extends yy_Base
     return $this;
   }
 
-  function make_return()
+  function make_return($res = NULL)
   {
     return $this;
   }

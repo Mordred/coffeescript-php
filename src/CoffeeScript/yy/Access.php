@@ -6,7 +6,7 @@ class yy_Access extends yy_Base
 {
   public $children = array('name');
 
-  function constructor($name, $tag = NULL)
+  function constructor($name = NULL, $tag = NULL)
   {
     $this->name = $name;
     $this->name->as_key = TRUE;

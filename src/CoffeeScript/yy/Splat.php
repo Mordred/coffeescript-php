@@ -55,7 +55,7 @@ class yy_Splat extends yy_Base
     return '['.implode(', ', $base).'].concat('.implode(', ', $args).')';
   }
 
-  function constructor($name)
+  function constructor($name = NULL)
   {
     if (is_object($name))
     {
@@ -69,12 +69,12 @@ class yy_Splat extends yy_Base
     return $this;
   }
 
-  function assigns($name)
+  function assigns($name = NULL)
   {
     return $this->name->assigns($name);
   }
 
-  function compile($options)
+  function compile($options, $level = NULL)
   {
     if (isset($this->index) && $this->index)
     {

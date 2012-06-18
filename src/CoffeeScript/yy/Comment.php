@@ -4,7 +4,7 @@ namespace CoffeeScript;
 
 class yy_Comment extends yy_Base
 {
-  function constructor($comment)
+  function constructor($comment = NULL)
   {
     $this->comment = $comment;
 

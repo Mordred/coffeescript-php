@@ -6,7 +6,7 @@ class yy_For extends yy_While
 {
   public $children = array('body', 'source', 'guard', 'step');
 
-  function constructor($body, $source)
+  function constructor($body = NULL, $source = NULL)
   {
     $this->source = $source['source'];
     $this->guard = isset($source['guard']) ? $source['guard'] : NULL;
@@ -221,7 +221,7 @@ class yy_For extends yy_While
                ($val instanceof yy_Value) &&
                (isset($val->base) && $val->base && ($val->base->unwrap_all() instanceof yy_Code) &&
                 count($val->properties) === 1 &&
-                isset($val->properties[0]->name) && 
+                isset($val->properties[0]->name) &&
                 in_array($val->properties[0]->name['value'], array('call', 'apply'), TRUE))))
       {
         continue;

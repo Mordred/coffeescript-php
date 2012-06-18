@@ -6,7 +6,7 @@ class yy_Extends extends yy_Base
 {
   public $children = array('child', 'parent');
 
-  function constructor($child, $parent)
+  function constructor($child = NULL, $parent = NULL)
   {
     $this->child = $child;
     $this->parent = $parent;
@@ -14,7 +14,7 @@ class yy_Extends extends yy_Base
     return $this;
   }
 
-  function compile($options)
+  function compile($options, $level = NULL)
   {
     $tmp = yy('Call', yy('Value', yy('Literal', utility('extends'))),
       array($this->child, $this->parent));

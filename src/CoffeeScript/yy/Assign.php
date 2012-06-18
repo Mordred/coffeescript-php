@@ -6,7 +6,7 @@ class yy_Assign extends yy_Base
 {
   public $children = array('variable', 'value');
 
-  function constructor($variable, $value, $context = '', $options = NULL)
+  function constructor($variable = NULL, $value = NULL, $context = '', $options = NULL)
   {
     $this->variable = $variable;
     $this->value = $value;
@@ -27,7 +27,7 @@ class yy_Assign extends yy_Base
     return $this;
   }
 
-  function assigns($name)
+  function assigns($name = NULL)
   {
     if ($this->context === 'object')
     {
@@ -336,7 +336,7 @@ class yy_Assign extends yy_Base
     return $options['level'] > LEVEL_TOP ? "({$code})" : $code;
   }
 
-  function is_statement($options)
+  function is_statement($options = array())
   {
     return isset($options['level']) && $options['level'] === LEVEL_TOP && $this->context && strpos($this->context, '?') > -1;
   }

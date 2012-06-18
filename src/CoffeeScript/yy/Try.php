@@ -60,7 +60,7 @@ class yy_Try extends yy_Base
     return $this->attempt->jumps($options) || (isset($this->recovery) && $this->recovery->jumps($options));
   }
 
-  function make_return($res)
+  function make_return($res = NULL)
   {
     if ($this->attempt)
     {
